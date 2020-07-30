@@ -26,5 +26,17 @@ Phantom List is a desktop Application for automating a sequence of instruction f
 	It is important that the input written correctly with comas separating each section.
 	Example: int,int,str,str,str = 100,150,True,False,False
 	
-	The five section correlate as follows x position, y position, Double Click, Left Click, Right Click. 
+	The five section correlate as follows x position, y position, Double Click, Left Click, Right Click.
+## Clear
+	Pressing Clear will erase all inputs that appear in the list and on memory.
+
+## Save Files
+	The Save function will allow you to save your project where ever you like via pop-up window.
+
+## Load Files
+	The Load function will allow you to open and load previous automation list so that it can be run again or edited.
+
+## Text Input
+	The text line edit appears at the bottom of the programs window, If kept blank, text automation will not be activated, 
+	if text has been entered it will be written when Capture is selected.
 
