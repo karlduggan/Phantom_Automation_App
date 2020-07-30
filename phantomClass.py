@@ -64,7 +64,7 @@ class Phantom(object):
                 # Position automation check
                 xpos = self.data_list[index][1]
                 ypos = self.data_list[index][2]
-                p.moveTo(xpos,ypos, 0.4)
+                p.moveTo(xpos,ypos, 0.2)
                 
                 # Check Double click Boolean 
                 if self.data_list[index][3] == True:
@@ -154,4 +154,29 @@ class Phantom(object):
             index[0] = num
             num += 1
 
+    # Convert added input into the data list
+    def addConvert(self, input):
+        inputSpl = input.split(',')
+        # Get X & Y position
+        xpos = int(inputSpl[0])
+        ypos = int(inputSpl[1])
+        # Get boolean input by converting it from string
+        dclk = self.getBool(inputSpl[2])
+        lclk = self.getBool(inputSpl[3])
+        rclk = self.getBool(inputSpl[4])
+        # Text input will equal none
+        text = None
+        # Add these values into the data list
+        self.insert_data(xpos,ypos,dclk,lclk,rclk,text)
+        
+            
+    # To convert str to boolean
+    def getBool(self, value):
+        if value.lower() == 'true':
+            return True
+        if value.lower() =='false':
+            return False
+
+if __name__ == "__main__":
+    main = Phantom()
     
