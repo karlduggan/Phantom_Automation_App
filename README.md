@@ -20,5 +20,11 @@ Phantom List is a desktop Application for automating a sequence of instruction f
 ## Delete
 	To delete, select item from list and press Delete. 
 	The selection will be removed and the index order will be adjusted.
-
+## Add
+	Pressing Add will initiate a pop-up to appear where the user will be able to manually 
+	write the input to be added to the list.
+	It is important that the input written correctly with comas separating each section.
+	Example: int,int,str,str,str = 100,150,True,False,False
+	
+	The five section correlate as follows x position, y position, Double Click, Left Click, Right Click. 
 
