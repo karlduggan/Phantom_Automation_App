@@ -1,6 +1,6 @@
 # Phantom_Automation_App
 Phantom List is a desktop Application for automating a sequence of instruction for mouse and keyboard using Python, PyAutoGui module and PyQt5 GUI framework. The initial idea was inspired by ghost mouse where a user can record mouse information and play it back. Having used PyAutoGui to automate tasks, I wanted to create a program using the PyAutoGui module and create a user interface with PyQt5 so that someone without knowledge of python would be able to use it. During the development I have tried to minimize the amount of button and windows to create a more simpler and minimalistic look.
-<img src= "https://github.com/karlduggan/Phantom_Automation_App/blob/master/screenshot.png">
+<img src= "https://github.com/karlduggan/Phantom_Automation_App/blob/master/Demos/screenshot.png">
 
 ## Capture
 	To capture the position of your mouse, using the shortcut key "Ctrl + A" input the position data 
