@@ -1,4 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QApplication, QWidget, QInputDialog, QLineEdit
 from phantomClass import Phantom
 from threading import Thread
 import pickle
@@ -28,6 +29,7 @@ class Ui_Form(object):
         self.pushButton_add = QtWidgets.QPushButton(self.widget)
         self.pushButton_add.setObjectName("pushButton_add")
         self.gridLayout.addWidget(self.pushButton_add, 7, 2, 1, 1)
+        self.pushButton_add.clicked.connect(self.getText)
         
         self.pushButton_delete = QtWidgets.QPushButton(self.widget)
         self.pushButton_delete.setObjectName("pushButton_delete")
@@ -59,10 +61,6 @@ class Ui_Form(object):
         self.checkBox_rightClick = QtWidgets.QCheckBox(self.widget)
         self.checkBox_rightClick.setObjectName("checkBox_rightClick")
         self.gridLayout.addWidget(self.checkBox_rightClick, 3, 2, 1, 1)
-        
-        self.checkBox_loopClick = QtWidgets.QCheckBox(self.widget)
-        self.checkBox_loopClick.setObjectName("checkBox_loopClick")
-        self.gridLayout.addWidget(self.checkBox_loopClick, 4, 2, 1, 1)
         
         self.widget_saveload = QtWidgets.QWidget(self.widget)
         self.widget_saveload.setObjectName("widget_saveload")
@@ -103,7 +101,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Phantom List"))
+        Form.setWindowTitle(_translate("Form", "Phantom List v1.0"))
         self.pushButton_add.setText(_translate("Form", "Add"))
         self.pushButton_delete.setText(_translate("Form", "Delete"))
         self.label_text.setText(_translate("Form", "Text :"))
@@ -115,7 +113,7 @@ class Ui_Form(object):
         self.checkBox_leftClick.setShortcut(_translate("Form", "Meta+W"))
         self.checkBox_rightClick.setText(_translate("Form", "Right Click / Ctrl + E"))
         self.checkBox_rightClick.setShortcut(_translate("Form", "Meta+E"))
-        self.checkBox_loopClick.setText(_translate("Form", "Loop"))
+
         self.pushButton_save.setText(_translate("Form", "Save"))
         self.pushButton_load.setText(_translate("Form", "Load"))
         self.pushButton_clear.setText(_translate("Form", "Clear"))
@@ -158,7 +156,7 @@ class Ui_Form(object):
     # Play Button  play and stop
     def playAction(self):
         # Check that data list is not empty
-        if self.phantom.get_dataList() != []:    
+        if self.phantom.get_dataList() != []:
             self._play()
             
         else:
@@ -208,6 +206,16 @@ class Ui_Form(object):
         self.phantom.delete_datalist(item)
         
         # Update list
+        self.update_listWidget()
+    
+    def getText(self):
+        text, okPressed = QInputDialog.getText(Form, "Input Entry","Enter Input: \n\nX postion,\nY position,\nDouble click (True Or False),\nLeft Click (True Or False),\nRight Click (True Or False),\n", QLineEdit.Normal, "")
+        if okPressed and text != '':
+            try:
+                self.phantom.addConvert(text)
+            except:
+                print('Incorrect input')
+        # Update the list
         self.update_listWidget()
         
         
