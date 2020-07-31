@@ -47,6 +47,7 @@ Phantom List is a desktop Application for automating a sequence of instruction f
 	The Save function will allow you to save your project where ever you like via pop-up window.
 <br/>
 <img src="https://github.com/karlduggan/Phantom_Automation_App/blob/master/Demos/demo_save.gif">
+
 ## Load Files
 	The Load function will allow you to open and load previous automation list so that it can be run again or edited.
 <br/>
