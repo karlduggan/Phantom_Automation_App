@@ -5,6 +5,8 @@ Phantom List is a desktop Application for automating a sequence of instruction f
 ## Capture
 	To capture the position of your mouse, using the shortcut key "Ctrl + A" input the position data 
 	along with mouse button option into the list which will appear in the list window.
+<br/>
+<img src="https://github.com/karlduggan/Phantom_Automation_App/blob/master/Demos/demo_capture.gif">
 
 ## Mouse Buttons 
 	There are currently three boxes to choose through when selection mouse button action.
@@ -17,10 +19,13 @@ Phantom List is a desktop Application for automating a sequence of instruction f
 ## Play
 	Once your sequence of automated instruction is complete,
 	pressing Play will run through and action chronologically.
-
+<br/>
+<img src="https://github.com/karlduggan/Phantom_Automation_App/blob/master/Demos/demo_play.gif">
 ## Delete
 	To delete, select item from list and press Delete. 
 	The selection will be removed and the index order will be adjusted.
+<br/>
+<img src="https://github.com/karlduggan/Phantom_Automation_App/blob/master/Demos/demo_delete.gif">
 ## Add
 	Pressing Add will initiate a pop-up to appear where the user will be able to manually 
 	write the input to be added to the list.
@@ -28,16 +33,22 @@ Phantom List is a desktop Application for automating a sequence of instruction f
 	Example: int,int,str,str,str = 100,150,True,False,False
 	
 	The five section correlate as follows x position, y position, Double Click, Left Click, Right Click.
+<br/>
+<img src="https://github.com/karlduggan/Phantom_Automation_App/blob/master/Demos/demo_add.gif">
 ## Clear
 	Pressing Clear will erase all inputs that appear in the list and on memory.
-
+<br/>
+<img src="https://github.com/karlduggan/Phantom_Automation_App/blob/master/Demos/demo_clear.gif">
 ## Save Files
 	The Save function will allow you to save your project where ever you like via pop-up window.
-
+<br/>
+<img src="https://github.com/karlduggan/Phantom_Automation_App/blob/master/Demos/demo_save.gif">
 ## Load Files
 	The Load function will allow you to open and load previous automation list so that it can be run again or edited.
-
+<br/>
+<img src="https://github.com/karlduggan/Phantom_Automation_App/blob/master/Demos/demo_load.gif">
 ## Text Input
 	The text line edit appears at the bottom of the programs window, If kept blank, text automation will not be activated, 
 	if text has been entered it will be written when Capture is selected.
-
+<br/>
+<img src="https://github.com/karlduggan/Phantom_Automation_App/blob/master/Demos/demo_text.gif">
